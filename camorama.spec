@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post 
+%post
 %gconf_schema_install
 
 %files
