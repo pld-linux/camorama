@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	bonobo-activation-devel >= 1.0.0
 BuildRequires:	glib2-devel >= 2.0.0
 BuildRequires:	gnome-vfs2-devel >= 2.0.0
-BuildRequires:	gtk+2-devel >= 2.0.3
+BuildRequires:	gtk+2-devel >= 1:2.0.3
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnome-devel >= 2.0.0
