@@ -1,12 +1,14 @@
 Summary:	GNOME webcam program
 Summary(pl):	Program do kamer internetowych dla GNOME
 Name:		camorama
-Version:	0.16
+Version:	0.17
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://camorama.fixedgear.org/downloads/%{name}-%{version}.tar.gz
-# Source0-md5:	8d685cdb872e890f047177e9aa6985f2
+Source0:	http://camorama.fixedgear.org/downloads/%{name}-%{version}.tar.bz2
+# Source0-md5:	2b2784af53a1ba8fa4419aa806967b35
+Patch0:		%{name}-schemas.patch
+Patch1:		%{name}-locale-names.patch
 URL:		http://camorama.fixedgear.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -38,12 +40,17 @@ innymi kamerami.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+
+mv po/{no,nb}.po
 
 %build
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--disable-schemas-install
 
 %{__make}
 
@@ -53,18 +60,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
 %gconf_schema_install
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/camorama
-%dir %{_datadir}/camorama
-%{_datadir}/camorama/camorama.glade
+%{_datadir}/camorama
 %{_desktopdir}/camorama.desktop
 %{_pixmapsdir}/camorama.png
 %{_sysconfdir}/gconf/schemas/camorama.schemas
