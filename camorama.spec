@@ -19,7 +19,7 @@ BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnome-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.0.1
 BuildRequires:	libpng-devel >= 1.2.2
-BuildRequires:	pango-devel >= 1.0.3
+BuildRequires:	pango-devel >= 1:1.0.3
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
