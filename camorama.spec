@@ -8,16 +8,18 @@ Group:		Applications
 Source0:	http://camorama.fixedgear.org/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	8d685cdb872e890f047177e9aa6985f2
 URL:		http://camorama.fixedgear.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	bonobo-activation-devel >= 1.0.0
 BuildRequires:	glib2-devel >= 2.0.0
-BuildRequires:	pango-devel >= 1.0.3
+BuildRequires:	gnome-vfs2-devel >= 2.0.0
 BuildRequires:	gtk+2-devel >= 2.0.3
-BuildRequires:	libgnome-devel >= 2.0.0
-BuildRequires:	libgnomeui-devel >= 2.0.1
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libbonoboui-devel >= 2.0.0
-BuildRequires:	gnome-vfs2-devel >= 2.0.0
-BuildRequires:	bonobo-activation-devel >= 1.0.0
+BuildRequires:	libgnome-devel >= 2.0.0
+BuildRequires:	libgnomeui-devel >= 2.0.1
 BuildRequires:	libpng-devel >= 1.2.2
+BuildRequires:	pango-devel >= 1.0.3
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -61,7 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/camorama
-%{_datadir}/applications/camorama.desktop
-%{_pixmapsdir}/camorama.png
+%dir %{_datadir}/camorama
 %{_datadir}/camorama/camorama.glade
+%{_desktopdir}/camorama.desktop
+%{_pixmapsdir}/camorama.png
 %{_sysconfdir}/gconf/schemas/camorama.schemas
