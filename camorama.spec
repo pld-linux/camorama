@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://camorama.fixedgear.org/downloads/%{name}-%{version}.tar.gz
+# Source0-md5:	8d685cdb872e890f047177e9aa6985f2
 URL:		http://camorama.fixedgear.org/
 BuildRequires:	glib2-devel >= 2.0.0
 BuildRequires:	pango-devel >= 1.0.3
