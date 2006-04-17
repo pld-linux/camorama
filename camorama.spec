@@ -2,13 +2,14 @@ Summary:	GNOME webcam program
 Summary(pl):	Program do kamer internetowych dla GNOME
 Name:		camorama
 Version:	0.17
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications
 Source0:	http://camorama.fixedgear.org/downloads/%{name}-%{version}.tar.bz2
 # Source0-md5:	2b2784af53a1ba8fa4419aa806967b35
 Patch0:		%{name}-schemas.patch
 Patch1:		%{name}-locale-names.patch
+Patch2:		%{name}-desktop.patch
 URL:		http://camorama.fixedgear.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
