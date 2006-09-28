@@ -1,10 +1,10 @@
---- camorama-0.17/data/Makefile.am.orig	2004-09-07 14:33:03.974381064 +0200
-+++ camorama-0.17/data/Makefile.am	2004-09-07 14:33:09.666515728 +0200
+--- camorama-0.18/data/Makefile.am.orig	2006-09-27 17:56:07.000000000 +0200
++++ camorama-0.18/data/Makefile.am	2006-09-28 18:31:43.000000000 +0200
 @@ -25,8 +25,6 @@
  	cp $(keys_DATA) ~/.gnome/mime-info/
  
  install-data-local:
--	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA) 
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(schema_DATA) 
 -	$(GCONFTOOL) --shutdown
  
  EXTRA_DIST = $(glade_DATA) $(schema_in_files) $(stuff_DATA)

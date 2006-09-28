@@ -1,5 +1,5 @@
---- camorama-0.17/camorama.desktop.in~	2006-04-17 09:12:08.000000000 +0200
-+++ camorama-0.17/camorama.desktop.in	2006-04-17 09:12:08.000000000 +0200
+--- camorama-0.18/camorama.desktop.in.orig	2006-09-28 18:54:52.000000000 +0200
++++ camorama-0.18/camorama.desktop.in	2006-09-28 18:57:05.000000000 +0200
 @@ -2,10 +2,11 @@
  _Name=Camorama Webcam Viewer
  _Comment=View, alter and save images from a webcam
