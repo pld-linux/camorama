@@ -1,5 +1,5 @@
 Summary:	GNOME webcam program
-Summary(pl):	Program do kamer internetowych dla GNOME
+Summary(pl.UTF-8):   Program do kamer internetowych dla GNOME
 Name:		camorama
 Version:	0.18
 Release:	1
@@ -31,11 +31,11 @@ the moment, and I hope to make it much more complete. I also plan to
 make it more generic, as I initially wrote it with only my own
 Creative Webcam 3 in mind. Hopefully it will work with other cameras.
 
-%description -l pl
+%description -l pl.UTF-8
 Camorama to program do kontrolowania kamer internetowych. Na razie
-jest prosty, ale autor ma nadziejê uczyniæ go bardziej kompletnym;
-planuje tak¿e uczyniæ go bardziej ogólnym, bo na razie program by³
-pisany tylko z my¶l± o Creative Webcam 3. W przysz³o¶ci ma dzia³aæ z
+jest prosty, ale autor ma nadziejÄ™ uczyniÄ‡ go bardziej kompletnym;
+planuje takÅ¼e uczyniÄ‡ go bardziej ogÃ³lnym, bo na razie program byÅ‚
+pisany tylko z myÅ›lÄ… o Creative Webcam 3. W przyszÅ‚oÅ›ci ma dziaÅ‚aÄ‡ z
 innymi kamerami.
 
 %prep
