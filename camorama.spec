@@ -1,5 +1,5 @@
 Summary:	GNOME webcam program
-Summary(pl.UTF-8):   Program do kamer internetowych dla GNOME
+Summary(pl.UTF-8):	Program do kamer internetowych dla GNOME
 Name:		camorama
 Version:	0.18
 Release:	1
