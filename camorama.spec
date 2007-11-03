@@ -2,7 +2,7 @@ Summary:	GNOME webcam program
 Summary(pl.UTF-8):	Program do kamer internetowych dla GNOME
 Name:		camorama
 Version:	0.18
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications
 Source0:	http://camorama.fixedgear.org/downloads/%{name}-%{version}.tar.bz2
@@ -23,6 +23,8 @@ BuildRequires:	libgnomeui-devel >= 2.0.1
 BuildRequires:	libpng-devel >= 1.2.2
 BuildRequires:	pango-devel >= 1:1.0.3
 Requires(post):	GConf2
+# sr@Latn vs. sr@latin
+Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,6 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+[ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
+	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}
 
 %clean
