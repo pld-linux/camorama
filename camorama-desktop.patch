@@ -1,16 +1,16 @@
---- camorama-0.18/camorama.desktop.in.orig	2006-09-28 18:54:52.000000000 +0200
-+++ camorama-0.18/camorama.desktop.in	2006-09-28 18:57:05.000000000 +0200
-@@ -2,10 +2,11 @@
- _Name=Camorama Webcam Viewer
- _Comment=View, alter and save images from a webcam
- Exec=camorama
+--- camorama-0.18/camorama.desktop.in	2006-09-28 18:57:05.000000000 +0200
++++ camorama-0.19/camorama.desktop.in	2011-12-29 23:03:51.929107629 +0200
+@@ -5,9 +5,9 @@
 -Terminal=0
 +Terminal=false
 +Encoding=UTF-8
  Type=Application
- Icon=camorama.png
+-Icon=camorama.png
 -Categories=Application;Graphics
-+Categories=GTK;GNOME;Graphics;Photograph;
++Icon=camorama
++Categories=GTK;GNOME;Graphics;Photograph;AudioVideo;
  StartupNotify=true
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=camorama
+ X-GNOME-Bugzilla-Component=General
+-X-GNOME-Bugzilla-Component=User Interface
