@@ -17,7 +17,7 @@ URL:		http://camorama.fixedgear.org/
 BuildRequires:	GConf2-devel
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	intltool >= 0.36.2
 BuildRequires:	libglade2-devel
