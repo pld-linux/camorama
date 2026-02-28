@@ -2,7 +2,7 @@ Summary:	GNOME webcam program
 Summary(pl.UTF-8):	Program do kamer internetowych dla GNOME
 Name:		camorama
 Version:	0.20.7
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications/Multimedia
 # up to 0.19
