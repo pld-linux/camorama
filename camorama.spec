@@ -2,7 +2,7 @@ Summary:	GNOME webcam program
 Summary(pl.UTF-8):	Program do kamer internetowych dla GNOME
 Name:		camorama
 Version:	0.20.7
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		X11/Applications/Multimedia
 # up to 0.19
@@ -11,9 +11,8 @@ Group:		X11/Applications/Multimedia
 Source0:	https://linuxtv.org/downloads/camorama/%{name}-%{version}.tar.gz
 # Source0-md5:	98c09616c3fd23821a2644f665620fda
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-fno-common.patch
 URL:		http://camorama.fixedgear.org/
-BuildRequires:	autoconf >= 2.53
-BuildRequires:	automake
 BuildRequires:	gdk-pixbuf2-devel >= 2.0
 BuildRequires:	gettext-tools >= 0.19.8
 # also possible: gtk+2 >= 2:2.24, gtk+4 >= 3.92
@@ -36,12 +35,9 @@ dodawania niektórych efektów graficznych.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure
 
 %{__make}
